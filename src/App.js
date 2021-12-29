@@ -1,9 +1,10 @@
 import './App.css';
 import Header from "./Header"
-import {useEffect, useMemo, useState} from "react";
+import {useEffect, useState} from "react";
+import ItemList from "./ItemList";
 
 function App() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState({name: "None", categories: []});
 
   useEffect(() => {
     const fetchList = async () => {
@@ -14,15 +15,10 @@ function App() {
     fetchList();
   }, []);
 
-  const selectedItem = useMemo(() => {
-    if(items.length) {
-      return items[0];
-    }
-  }, [items]);
-
   return (
       <div className="container">
-        <Header subtitle="List 4 U" />
+        <Header subtitle={items.name} />
+        <ItemList categories={items.categories} />
       </div>
   );
 }
