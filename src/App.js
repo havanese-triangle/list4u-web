@@ -4,7 +4,7 @@ import Header from "./Header"
 function App() {
   return (
       <div className="container">
-        <Header />
+        <Header subtitle="List 4 U" />
       </div>
   );
 }
