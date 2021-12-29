@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.subtitle {
+  font-style: italic;
+  font-size: x-large;
+  color: coral;
+}
+
+.logo {
+  height: 150px;
+}
+
+.featuredItem {
+  border-radius: 2px;
+  background-color: rgb(255, 190, 166);
+}
